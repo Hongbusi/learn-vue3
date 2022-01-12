@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <template id="my-app">
+    <button v-on:click="btn1Click">按钮1</button>
+    <div v-on:mousemove="mouseMove">div</div>
+    <!-- 语法糖 -->
+    <button @click="btn1Click">按钮1</button>
+    <!-- 绑定一个表达式 -->
+    <button @click="counter++">{{ counter }}</button>
+    <!-- 绑定一个对象 -->
+    <div v-on="{ click: btn1Click, mousemove: mouseMove }"></div>
+    <div @="{ click: btn1Click, mousemove: mouseMove }"></div>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+
+      data() {
+        return {
+          message: 'Hello World',
+          counter: 100
+        }
+      },
+
+      methods: {
+        btn1Click() {
+          console.log('按钮 1 发生了点击');
+        },
+
+        mouseMove() {
+          console.log('鼠标移动了');
+        }
+      }
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>

@@ -10,7 +10,7 @@ import debounceRef from './hook/useDebounceRef';
 
 export default {
   setup() {
-    const message = debounceRef('Hello World');
+    const message = debounceRef('Hello World', 100);
 
     return {
       message

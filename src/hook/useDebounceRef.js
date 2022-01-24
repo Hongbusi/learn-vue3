@@ -1,7 +1,7 @@
 import { customRef } from 'vue';
 
 // 自定义 ref
-export default function(value) {
+export default function(value, delay = 300) {
   let timer = null;
   return customRef((track, trigger) => {
     return {
@@ -15,7 +15,7 @@ export default function(value) {
         timer = setTimeout(() => {
           value = newValue;
           trigger();
-        }, 1000);
+        }, delay);
       }
     }
   });

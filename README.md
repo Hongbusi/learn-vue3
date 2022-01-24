@@ -2,4 +2,5 @@
 
 ## API
 
-- [customRef](./src/hook/useDebounceRef.js)
+- [customRef](./src/api/customRef.vue)
+- [computed](./src/api/computed.vue)

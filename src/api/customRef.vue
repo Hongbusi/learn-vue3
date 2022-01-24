@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import debounceRef from './hook/useDebounceRef';
+import debounceRef from '../hook/useDebounceRef';
 
 export default {
   setup() {

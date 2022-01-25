@@ -1,6 +1,3 @@
 # learn-vue3
 
-## API
-
-- [customRef](./src/api/customRef.vue)
-- [computed](./src/api/computed.vue)
+学习 Vue3 内容。

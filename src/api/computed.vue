@@ -27,7 +27,6 @@ export default {
       }
     });
 
-
     const changeName = () => {
       fullName.value = 'h bs';
     }

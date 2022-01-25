@@ -1,4 +1,4 @@
 import { createApp } from 'vue';
-import App from './01_内置组件/App.vue';
+import App from './02_响应式基础API/App.vue';
 
 createApp(App).mount('#app');

@@ -3,21 +3,19 @@
     Open full screen modal!
   </button>
 
-  <teleport to="body">
-    <div v-if="modalOpen" class="modal">
-      <div>
-        I'm a modal!
-        <button @click="modalOpen = false">
-          Close
-        </button>
-      </div>
+  <div v-if="modalOpen" class="modal">
+    <div>
+      I'm a modal!
+      <button @click="modalOpen = false">
+        Close
+      </button>
     </div>
-  </teleport>
+  </div>
 
   <teleport to="body">
     <div v-if="modalOpen" class="modal">
       <div>
-        I'm a modal!
+        I'm a teleport modal!
         <button @click="modalOpen = false">
           Close
         </button>

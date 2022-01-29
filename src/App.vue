@@ -1,7 +1,13 @@
 <template>
   <div class="content">
     <h1>Hello World!</h1>
-    <hr />
+    <hr>
+
+    <h2>useDebounceRef</h2>
+    <input v-model="message">
+    <h2>{{ message }}</h2>
+    <hr>
+
     <h2>useCounter</h2>
     <p>{{ counter }}</p>
     <button @click="decrement">-1</button>
@@ -20,6 +26,7 @@
 </template>
 
 <script>
+import useDebounceRef from './hooks/useDebounceRef';
 import useCounter from "./hooks/useCounter";
 import useTitle from "./hooks/useTitle";
 import useScrollPosition from './hooks/useScrollPosition';
@@ -27,6 +34,8 @@ import useMousePosition from './hooks/useMousePosition';
 
 export default {
   setup() {
+    const message = useDebounceRef();
+
     const { counter, increment, decrement } = useCounter();
 
     const titleRef = useTitle();
@@ -40,6 +49,8 @@ export default {
     const { mouseX, mouseY } = useMousePosition();
 
     return {
+      message,
+
       counter,
       increment,
       decrement,

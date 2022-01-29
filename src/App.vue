@@ -3,7 +3,7 @@
     <h1>Hello World!</h1>
     <hr>
 
-    <h2>useDebounceRef</h2>
+    <h2>useDebounce</h2>
     <input v-model="message">
     <h2>{{ message }}</h2>
     <hr>

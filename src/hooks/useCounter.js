@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-export function useCounter() {
+export default function() {
   const counter = ref(0);
 
   const increment = () => counter.value++;

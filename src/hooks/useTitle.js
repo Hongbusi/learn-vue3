@@ -1,6 +1,6 @@
 import { ref, watch } from 'vue';
 
-export function useTitle(title = 'Hongbusi') {
+export default function(title = 'Hongbusi') {
   const titleRef = ref(title);
 
   watch(titleRef, (newTitle) => {

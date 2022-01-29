@@ -8,8 +8,13 @@
     <button @click="increment">+1</button>
 
     <div class="scroll">
-      <div class="scroll-x">scrollX: {{ scrollX }}</div>
-      <div class="scroll-y">scrollY: {{ scrollY }}</div>
+      <div>scrollX: {{ scrollX }}</div>
+      <div>scrollY: {{ scrollY }}</div>
+    </div>
+
+    <div class="mouse">
+      <div>mouseX: {{ mouseX }}</div>
+      <div>mouseY: {{ mouseY }}</div>
     </div>
   </div>
 </template>
@@ -18,6 +23,7 @@
 import useCounter from "./hooks/useCounter";
 import useTitle from "./hooks/useTitle";
 import useScrollPosition from './hooks/useScrollPosition';
+import useMousePosition from './hooks/useMousePosition';
 
 export default {
   setup() {
@@ -31,12 +37,18 @@ export default {
 
     const { scrollX, scrollY } = useScrollPosition();
 
+    const { mouseX, mouseY } = useMousePosition();
+
     return {
       counter,
       increment,
       decrement,
+
       scrollX,
-      scrollY
+      scrollY,
+
+      mouseX,
+      mouseY
     };
   }
 };
@@ -52,5 +64,11 @@ export default {
   position: fixed;
   right: 30px;
   bottom: 30px;
+}
+
+.mouse {
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
 }
 </style>

@@ -10,7 +10,7 @@ export default {
     const titleRef = useTitle();
 
     setTimeout(() => {
-      titleRef.value = 'test';
+      titleRef.value = '测试 title';
     }, 3000);
   }
 }

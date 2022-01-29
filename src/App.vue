@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import useDebounceRef from './hooks/useDebounceRef';
+import useDebounce from './hooks/useDebounce';
 import useCounter from "./hooks/useCounter";
 import useTitle from "./hooks/useTitle";
 import useScrollPosition from './hooks/useScrollPosition';
@@ -34,7 +34,7 @@ import useMousePosition from './hooks/useMousePosition';
 
 export default {
   setup() {
-    const message = useDebounceRef();
+    const message = useDebounce();
 
     const { counter, increment, decrement } = useCounter();
 

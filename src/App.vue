@@ -12,6 +12,10 @@
     <p>{{ counter }}</p>
     <button @click="decrement">-1</button>
     <button @click="increment">+1</button>
+    <hr>
+
+    <h2>useLocalStorage</h2>
+    <button @click="clickEdit">修改</button>
 
     <div class="scroll">
       <div>scrollX: {{ scrollX }}</div>
@@ -31,6 +35,7 @@ import useCounter from "./hooks/useCounter";
 import useTitle from "./hooks/useTitle";
 import useScrollPosition from './hooks/useScrollPosition';
 import useMousePosition from './hooks/useMousePosition';
+import useLocalStorage from './hooks/useLocalStorage';
 
 export default {
   setup() {
@@ -48,6 +53,12 @@ export default {
 
     const { mouseX, mouseY } = useMousePosition();
 
+    const data = useLocalStorage('name', 'hbs');
+
+    const clickEdit = () => {
+      data.value = 'Hongbusi';
+    }
+
     return {
       message,
 
@@ -59,7 +70,9 @@ export default {
       scrollY,
 
       mouseX,
-      mouseY
+      mouseY,
+
+      clickEdit
     };
   }
 };

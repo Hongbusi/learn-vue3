@@ -26,6 +26,10 @@
       <div>mouseX: {{ mouseX }}</div>
       <div>mouseY: {{ mouseY }}</div>
     </div>
+    <hr>
+
+    <h2>directives</h2>
+    <directives />
   </div>
 </template>
 
@@ -37,7 +41,13 @@ import useScrollPosition from './hooks/useScrollPosition';
 import useMousePosition from './hooks/useMousePosition';
 import useLocalStorage from './hooks/useLocalStorage';
 
+import directives from './components/directives.vue';
+
 export default {
+  components: {
+    directives
+  },
+
   setup() {
     const message = useDebounce();
 

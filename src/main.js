@@ -1,13 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
+import registerDirectives from './directives';
+
 const app = createApp(App);
 
-// 全局指令
-app.directive('focus', {
-  mounted(el) {
-    el.focus();
-  }
-});
+registerDirectives(app);
 
 app.mount('#app');

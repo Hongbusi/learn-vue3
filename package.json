@@ -21,13 +21,14 @@
   },
   "homepage": "https://github.com/Hongbusi/learn-vue3#readme",
   "dependencies": {
+    "dayjs": "^1.10.7",
     "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.0.0",
-    "vite": "^2.7.2",
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
-    "husky": "^7.0.4"
+    "@vitejs/plugin-vue": "^2.0.0",
+    "husky": "^7.0.4",
+    "vite": "^2.7.2"
   }
 }

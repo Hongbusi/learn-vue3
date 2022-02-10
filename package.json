@@ -22,7 +22,8 @@
   "homepage": "https://github.com/Hongbusi/learn-vue3#readme",
   "dependencies": {
     "dayjs": "^1.10.7",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",

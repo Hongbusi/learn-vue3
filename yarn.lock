@@ -273,6 +273,11 @@
     "@vue/compiler-dom" "3.2.28"
     "@vue/shared" "3.2.28"
 
+"@vue/devtools-api@^6.0.0-beta.18":
+  version "6.0.5"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.0.5.tgz#7e35cfee4f44ada65cde0d19341fbaeb0ae353f4"
+  integrity sha512-2nM84dzo3B63pKgxwoArlT1d/yqSL0y2lG2GiyyGhwpyPTwkfIuJHlCNbputCoSCNnT6MMfenK1g7nv7Mea19A==
+
 "@vue/reactivity-transform@3.2.28":
   version "3.2.28"
   resolved "https://registry.npmjs.org/@vue/reactivity-transform/-/reactivity-transform-3.2.28.tgz#e0abf86694f4d182f974fbac934fc3e23e0a6d9b"
@@ -1482,6 +1487,13 @@ vite@^2.7.2:
     rollup "^2.59.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue-router@^4.0.12:
+  version "4.0.12"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
+  integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.18"
 
 vue@^3.2.25:
   version "3.2.28"

@@ -7,7 +7,17 @@ const routes = [
   },
   {
     path: '/home',
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/Home.vue'),
+    children: [
+      {
+        path: 'message',
+        component: () => import('../views/HomeMessage.vue'),
+      },
+      {
+        path: 'shops',
+        component: () => import('../views/HomeShops.vue'),
+      }
+    ]
   },
   {
     path: '/about',

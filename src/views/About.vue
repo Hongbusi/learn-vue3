@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { useRoute } from 'vue-router';
 import useDebounce from '../hooks/useDebounce';
 import useCounter from "../hooks/useCounter";
 import useTitle from "../hooks/useTitle";
@@ -49,6 +50,9 @@ export default {
   },
 
   setup() {
+    const route = useRoute();
+
+    console.log(route.query);
     const message = useDebounce();
 
     const { counter, increment, decrement } = useCounter();

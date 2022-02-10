@@ -9,14 +9,19 @@
 
 <script>
 import { useRouter } from 'vue-router';
-import router from './router';
 
 export default {
   setup() {
     const router = useRouter();
 
     const jumpToAbout = () => {
-      router.push('/about')
+      router.push({
+        path: '/about',
+        query: {
+          name: 'hbs',
+          age: 18
+        }
+      })
     }
 
     return {

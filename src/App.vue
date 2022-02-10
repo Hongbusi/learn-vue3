@@ -7,7 +7,14 @@
     </router-link>
     <router-link to="/about">About</router-link>
     <button @click="jumpToAbout">关于</button>
-    <router-view></router-view>
+
+    <router-view v-slot="props">
+      <transition name="hbs">
+        <keep-alive>
+          <component :is="props.Component"></component>
+        </keep-alive>
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -36,5 +43,18 @@ export default {
 </script>
 
 <style>
+  .hbs-enter-form,
+  .hbs-leave-to {
+    opacity: 0;
+  }
 
+  .hbs-enter-to,
+  .hbs-leave-form {
+    opacity: 1;
+  }
+
+  .hbs-enter-active,
+  .hbs-leave-active {
+    transition: opacity 1s ease;
+  }
 </style>

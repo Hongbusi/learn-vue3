@@ -1,6 +1,10 @@
 <template>
   <div class="content">
-    <router-link to="/home">Home</router-link>
+    <router-link to="/home" v-slot="props" custom>
+      <button>{{ props.href }}</button>
+      <button @click="props.navigate">哈哈哈</button>
+      <button>{{ props.isActive }}</button>
+    </router-link>
     <router-link to="/about">About</router-link>
     <button @click="jumpToAbout">关于</button>
     <router-view></router-view>
